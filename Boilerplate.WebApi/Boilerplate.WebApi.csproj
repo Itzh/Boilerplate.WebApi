@@ -1,0 +1,31 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+	<PropertyGroup>
+		<TargetFramework>net6.0</TargetFramework>
+		<Nullable>enable</Nullable>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<UserSecretsId>823aacb1-e3ca-484c-bf1b-722d21273557</UserSecretsId>
+		<DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+		<GenerateDocumentationFile>true</GenerateDocumentationFile>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<None Include="..\.editorconfig" Link=".editorconfig" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Ardalis.ApiEndpoints" Version="4.0.1" />
+		<PackageReference Include="Ardalis.ApiEndpoints.CodeAnalyzers" Version="4.0.0" />
+		<PackageReference Include="Ardalis.ApiEndpoints.Swashbuckle" Version="4.0.1" />
+		<PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="6.0.0" />
+		<PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.15.0" />
+		<PackageReference Include="Serilog" Version="2.10.0" />
+		<PackageReference Include="Serilog.AspNetCore" Version="5.0.0" />
+		<PackageReference Include="Serilog.Settings.AppSettings" Version="2.2.2" />
+		<PackageReference Include="Serilog.Settings.Configuration" Version="3.3.0" />
+		<PackageReference Include="Serilog.Sinks.Console" Version="4.0.1" />
+		<PackageReference Include="Swashbuckle.AspNetCore" Version="6.3.0" />
+	</ItemGroup>
+	<ItemGroup>
+		<InternalsVisibleTo Include="Boilerplate.WebApi.Tests" />
+	</ItemGroup>
+</Project>
