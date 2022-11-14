@@ -11,5 +11,10 @@ mv 'Boilerplate.WebApi.Tests/' $ns'.Tests'
 mv $ns'.Tests/Boilerplate.WebApi.Tests.csproj' $ns'.Tests'/$ns'.Tests.csproj'
 mv 'Boilerplate.WebApi.sln' $ns.sln
 
+# cleanup template repo settings
+rm -rf .git/
+rm .gitattributes
+rm .gitignore
+
 # remove this script
 rm -- "$0"
