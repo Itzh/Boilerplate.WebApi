@@ -1,0 +1,41 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: Boilerplate.WebApi
+  labels:
+    app: Boilerplate.WebApi
+spec: 
+  replicas: 2
+  #Zero downtime deploy
+  minReadySeconds: 5
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 1
+  selector:
+    matchLabels:
+      app: Boilerplate.WebApi
+  template:
+    metadata:
+      labels:
+        app: Boilerplate.WebApi
+    spec:
+      containers:
+      - name: Boilerplate.WebApi
+        image: Boilerplate.WebApi:1
+        imagePullPolicy: Never
+        ports:
+        - containerPort: 80
+        livenessProbe:
+          httpGet:
+            path: /api/health
+            port: 80
+          initialDelaySeconds: 5
+          periodSeconds: 5
+        readinessProbe:
+          httpGet:
+            path: /api/health
+            port: 80
+          initialDelaySeconds: 5
+          periodSeconds: 5
