@@ -1,7 +1,8 @@
 # Boilerplate.WebApi
 
 Dotnet CORE Boilerplate with common configuration and setups for starting WebApi development.
-Includes serilog for log sinks and Ardalis apiEndpoints as a major framework to handle SoC of the endpoints.
+Includes serilog for log sinks and Ardalis ApiEndpoints as a major framework to handle SoC of the endpoints.
+The template is an attempt for clean and maintainable code
 
 The boilerplate is aimed to maximize test coverage and it's configured to work with integration tests.
 
